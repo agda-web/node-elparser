@@ -4,8 +4,8 @@
     "description": "A parser for S-expression of emacs lisp and some utilities.",
     "homepage": "https://github.com/kiwanami/node-elparser",
     "repository": {
-        "type" : "git",
-        "url" : "https://github.com/kiwanami/node-elparser.git"
+        "type": "git",
+        "url": "https://github.com/kiwanami/node-elparser.git"
     },
     "private": false,
     "directories": {
@@ -13,20 +13,20 @@
     },
     "main": "./index",
     "scripts": {
-        "pegjs": "pegjs ./lib/elsexp.pegjs",
-        "test":  "mocha --require intelli-espower-loader test/elparser.test.js"
+        "pegjs": "npm run peggy",
+        "peggy": "peggy ./lib/elsexp.pegjs",
+        "test": "mocha --require intelli-espower-loader test/elparser.test.js"
     },
     "keywords": [
-        "lisp", "emacs"
+        "lisp",
+        "emacs"
     ],
-    "homepage": "https://github.com/kiwanami/node-elparser",
     "author": "SAKURAI Masashi",
     "license": "MIT",
-    "dependencies": {},
     "devDependencies": {
-        "mocha": "~2",
-        "power-assert": "*",
         "intelli-espower-loader": "*",
-        "pegjs": "~0.8"
+        "mocha": "~2",
+        "peggy": "^2.0.1",
+        "power-assert": "*"
     }
 }
